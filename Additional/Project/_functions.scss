@@ -1,0 +1,42 @@
+// Placeholders
+%body-grid {
+    display: grid;
+    grid-template-rows: repeat(4, 300px);
+    grid-template-columns: repeat(3, 33%);
+    justify-items: stretch;
+    align-items: stretch;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
+
+%nav-item {
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    background-color: $light-black;
+    padding: 10px;
+    max-width: 160px;
+    color: white;
+}
+
+
+// Mixins
+@mixin nav-flex($media) {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+    @if $media==computer {
+        margin: 150px 60px 20px 60px;
+        padding-bottom: 20px;
+        clear: both;
+    } @else if $media==phone {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 120px;
+    } @else {
+        padding: auto;
+    }
+}

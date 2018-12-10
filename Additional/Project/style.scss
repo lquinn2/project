@@ -1,0 +1,189 @@
+@import "_variables.scss";
+@import "_functions.scss";
+
+header {
+    background-color: grey;
+    margin: -21px -8px 0 -8px;
+    padding: 20px 10px 0 10px;
+    text-align: center;
+
+    .logo-and-title {
+        float: left;
+        text-align: left;
+        position: absolute;
+        white-space: nowrap;
+        top: 15px;
+        left: $center-logo-and-title;
+
+        .logo {
+            float: left;
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    h1 {
+        font-family: script;
+        font-size: 3.5em;
+        margin: 25px;
+    }
+
+    nav {
+        a {
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .flexbox {
+            @include nav-flex(computer);
+        }
+
+        .nav-item {
+            @extend %nav-item;
+
+            &:hover {
+                background-color: $dark-gray;
+            }
+        }
+    }
+}
+
+
+
+
+body {
+    background-color: $pearl-white;
+
+    main {
+        width: $center-in-screen;
+        margin: auto;
+        margin-top: -20px;
+        padding: 5px 10px 20px 20px;
+        background-color: $candy-pink;
+
+        p {
+            margin: 30px 20px 30px 20px;
+            text-justify: auto;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: $floor;
+    left: 0px;
+    background-color: grey;
+    height: 120px;
+    text-align: center;
+
+    .footer-content {
+        vertical-align: baseline;
+        padding-top: 20px;
+    }
+}
+
+/* Header on phones */
+@media screen and ($media-phone) {
+    header {
+        height: 320px;
+        border-bottom: 2px solid $light-black;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .logo-and-title {
+            left: $center-logo;
+
+            .logo {
+                width: 30%;
+            }
+        }
+
+        .flexbox {
+            @include nav-flex(phone);
+
+            a {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/* Footer on phones */
+@media screen and ($media-phone) {
+    .footer-content {
+        padding-top: 0px;
+    }
+}
+
+/* Grid */
+.grid {
+    @extend %body-grid;
+    width: 80%;
+    margin: auto;
+
+    .grid-item {
+        width: auto;
+        height: 100%;
+        border: 2px solid $light-black;
+
+    }
+
+    .assorted-donuts {
+        grid-row: $grid-one;
+        grid-column: $grid-one-three;
+    }
+
+    .decorational-donuts {
+        grid-row: $grid-three;
+        grid-column: $grid-one-two;
+    }
+
+    .rainbow-donuts {
+        grid-row: $grid-two;
+        grid-column: $grid-two-three;
+    }
+
+    .chocolate {
+        grid-row: $grid-two;
+        grid-column: $grid-one;
+    }
+
+    .strawberry-frosted {
+        grid-row: $grid-three;
+        grid-column: $grid-three;
+    }
+
+    .pretty-donuts {
+        grid-row: $grid-four;
+        grid-column: $grid-one-three;
+    }
+}
+
+/* Grid on tablets */
+@media screen and ($media-tablet) {
+    main {
+        width: $center-in-screen-tablet;
+
+        .grid {
+            grid-template-rows: repeat(4, 140px);
+            margin-left: 40px;
+        }
+    }
+}
+
+/* Grid on phones */
+@media screen and ($media-phone) {
+    main {
+        width: $center-in-screen-phone;
+        margin-top: 0px;
+
+        .grid {
+            grid-template-rows: repeat(4, 70px);
+            margin-left: 8px;
+        }
+    }
+}

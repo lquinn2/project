@@ -1,0 +1,183 @@
+.grid {
+  display: grid;
+  grid-template-rows: repeat(4, 300px);
+  grid-template-columns: repeat(3, 33%);
+  justify-items: stretch;
+  align-items: stretch;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+header nav .nav-item {
+  flex: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  background-color: #303030;
+  padding: 10px;
+  max-width: 160px;
+  color: white;
+}
+
+header {
+  background-color: grey;
+  margin: -21px -8px 0 -8px;
+  padding: 20px 10px 0 10px;
+  text-align: center;
+}
+header .logo-and-title {
+  float: left;
+  text-align: left;
+  position: absolute;
+  white-space: nowrap;
+  top: 15px;
+  left: calc(50% - 240px);
+}
+header .logo-and-title .logo {
+  float: left;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+header h1 {
+  font-family: script;
+  font-size: 3.5em;
+  margin: 25px;
+}
+header nav a {
+  text-align: center;
+  margin-right: 10px;
+}
+header nav .flexbox {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin: 150px 60px 20px 60px;
+  padding-bottom: 20px;
+  clear: both;
+}
+header nav .nav-item:hover {
+  background-color: #414141;
+}
+
+body {
+  background-color: #c8c8c8;
+}
+body main {
+  width: calc(100vw - 50%);
+  margin: auto;
+  margin-top: -20px;
+  padding: 5px 10px 20px 20px;
+  background-color: #e67e81;
+}
+body main p {
+  margin: 30px 20px 30px 20px;
+  text-justify: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: calc(0 - 100vh);
+  left: 0px;
+  background-color: grey;
+  height: 120px;
+  text-align: center;
+}
+footer .footer-content {
+  vertical-align: baseline;
+  padding-top: 20px;
+}
+
+/* Header on phones */
+@media screen and (max-width: 550px) {
+  header {
+    height: 320px;
+    border-bottom: 2px solid #303030;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  header .logo-and-title {
+    left: calc(50% - 155px);
+  }
+  header .logo-and-title .logo {
+    width: 30%;
+  }
+  header .flexbox {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 120px;
+  }
+  header .flexbox a {
+    margin-bottom: 10px;
+  }
+}
+/* Footer on phones */
+@media screen and (max-width: 550px) {
+  .footer-content {
+    padding-top: 0px;
+  }
+}
+/* Grid */
+.grid {
+  width: 80%;
+  margin: auto;
+}
+.grid .grid-item {
+  width: auto;
+  height: 100%;
+  border: 2px solid #303030;
+}
+.grid .assorted-donuts {
+  grid-row: 1/span 1;
+  grid-column: 1/span 3;
+}
+.grid .decorational-donuts {
+  grid-row: 3/span 1;
+  grid-column: 1/span 2;
+}
+.grid .rainbow-donuts {
+  grid-row: 2/span 1;
+  grid-column: 2/span 2;
+}
+.grid .chocolate {
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
+}
+.grid .strawberry-frosted {
+  grid-row: 3/span 1;
+  grid-column: 3/span 1;
+}
+.grid .pretty-donuts {
+  grid-row: 4/span 1;
+  grid-column: 1/span 3;
+}
+
+/* Grid on tablets */
+@media screen and (max-width: 820px) {
+  main {
+    width: calc(100vw - 25%);
+  }
+  main .grid {
+    grid-template-rows: repeat(4, 140px);
+    margin-left: 40px;
+  }
+}
+/* Grid on phones */
+@media screen and (max-width: 550px) {
+  main {
+    width: calc(100vw - 30%);
+    margin-top: 0px;
+  }
+  main .grid {
+    grid-template-rows: repeat(4, 70px);
+    margin-left: 8px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

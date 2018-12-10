@@ -1,0 +1,27 @@
+// Positioners
+$center-in-screen: calc(100vw - 50%);
+$center-in-screen-tablet: calc(100vw - 25%);
+$center-in-screen-phone: calc(100vw - 30%);
+$center-logo-and-title: calc(50% - 240px);
+$center-logo: calc(50% - 155px);
+$floor: calc(0 - 100vh);
+
+// Colours
+$light-black: rgb(48, 48, 48);
+$dark-gray: rgb(65, 65, 65);
+$candy-pink: #e67e81;
+$brown: #303030;
+$pearl-white: rgb(200, 200, 200);
+
+// Media statements
+$media-phone: "max-width: 550px";
+$media-tablet: "max-width: 820px";
+
+// Grid
+$grid-one: 1 / span 1;
+$grid-two: 2 / span 1;
+$grid-three: 3 / span 1;
+$grid-four: 4 / span 1;
+$grid-one-two: 1 / span 2;
+$grid-one-three: 1 / span 3;
+$grid-two-three: 2 / span 2;

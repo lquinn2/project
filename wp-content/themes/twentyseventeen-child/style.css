@@ -1,0 +1,78 @@
+/*
+Theme Name: Twenty Seventeen Child
+Theme URI: http://example.com/twenty-seventeen-child/
+description: >-
+  Twenty Seventeen Child Theme
+Author: Liam Quinn
+Author URI: http://example.com
+Template: twentyseventeen
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: twenty-seventeen-child
+*/
+
+/* Bye bye powered by wordpress */
+div.site-info {
+    display: none;
+}
+
+/* Changes navigation bar color */
+div.navigation-top, ul#top-menu.menu {
+    background-color: #24282d !important;
+}
+
+/* Adds background shade behind site title for easier readability */
+div.site-branding > div.wrap {
+    background-color: rgba(50, 50, 50, 0.6);
+    padding-bottom: 5px;
+}
+
+/* Enlarges page's entry title */
+header.entry-header > h1.entry-title {
+    font-size: 4em !important;
+    color: #abb8c3 !important;
+}
+
+/* Removes underline from links and make a clickable box instead */
+div.entry-content > p > a {
+    text-decoration: none !important;
+    border: 2px solid white;
+    background-color: #31323d !important;
+}
+
+/* Removes useless scroll to bottom of page button on homepage */
+a.menu-scroll-down {
+    display: none !important;
+}
+
+/* Modifies text size for entry title only on JavaScript page */
+.page-id-9 header.entry-header > h1.entry-title{
+    font-size: 2.5em !important;
+}
+/* Modifies text size for entry title only on documentation page */
+.page-id-87 header.entry-header > h1.entry-title{
+    font-size: 1.8em !important;
+}
+
+/* Anchors last nav link to right side of screen */
+ul#top-menu.menu {
+    position: relative;
+}
+ul#top-menu.menu .last-link a {
+    position: absolute;
+    top: -30px;
+    left: 580px;
+}
+
+/* Changes colour of top and bottom border of navbar */
+.colors-dark .single-featured-image-header, .colors-dark .navigation-top, .colors-dark .main-navigation li, .colors-dark .entry-footer, .colors-dark #comments {
+    border-top-color: darkred !important;
+    border-bottom-color: darkred !important;
+}
+
+/* Adds indentation before bullets */
+ul {
+    margin-left: 40px;
+}
